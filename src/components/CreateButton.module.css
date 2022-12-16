@@ -1,0 +1,24 @@
+.create {
+  width: 5.625rem;
+  height: 3.25rem;
+  margin-left: 0.5rem;
+
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--White);
+  background: var(--BlueDark);
+}
+.create span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.create:hover {
+  cursor: pointer;
+  background: var(--Blue);
+}

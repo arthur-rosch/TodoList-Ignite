@@ -1,0 +1,21 @@
+.barTask {
+  height: 3.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.barTask textarea {
+  width: 39.875rem;
+  height: 3.375rem;
+
+  resize: none;
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+
+  color: var(--Gray-300);
+  background: var(--Gray-500);
+}
