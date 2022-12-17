@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   height: 12.6rem;
+  margin-bottom: -2rem;
   background: var(--Gray-700);
 
   display: flex;
