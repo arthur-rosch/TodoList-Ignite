@@ -1,0 +1,103 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fromTask {
+  height: 3.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.fromTask textarea {
+  width: 39.875rem;
+  height: 3.375rem;
+
+  resize: none;
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+
+  color: var(--Gray-300);
+  background: var(--Gray-500);
+}
+.create {
+  width: 5.625rem;
+  height: 3.25rem;
+  margin-left: 0.5rem;
+
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--White);
+  background: var(--BlueDark);
+}
+.create span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.create:hover {
+  cursor: pointer;
+  background: var(--Blue);
+}
+
+.tasks {
+  width: 46rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tasksDate {
+  width: 46rem;
+  height: 1.1875rem;
+  margin-bottom: 1.5rem;
+
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+
+  justify-content: space-between;
+}
+.tasksCreated {
+  color: var(--Blue);
+}
+.completedTasks {
+  color: var(--Purple);
+}
+
+.noTask {
+  width: 46rem;
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid var(--Gray-400);
+}
+.noTask > .task {
+  display: none;
+}
+.tasksList > footer {
+  display: none;
+}
+.img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.textDefault {
+  margin-top: 1rem;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--Gray-300);
+}

@@ -1,0 +1,18 @@
+.Task {
+  width: 46rem;
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  background: var(--Gray-500);
+  margin-bottom: 1rem;
+}
+.checkBox,
+.textTask,
+.trash {
+  margin: 1rem 0.75rem 2rem 1rem;
+}
+
+.textTask {
+  color: var(--Gray-100);
+  font-size: 14px;
+}
