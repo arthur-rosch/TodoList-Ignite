@@ -1,21 +1,48 @@
 import { Trash } from "phosphor-react";
+import { FormEvent } from "react";
 import style from "./Task.module.css";
 
 interface Task {
   content: string;
+  onDelete: (task: string) => void;
+  onCompletedTasks: (tasksCompleted: number) => void;
 }
 
-export function Task({ content }: Task) {
+export function Task({ content, onDelete, onCompletedTasks }: Task) {
+  function handleDeleteTask() {
+    onDelete(content);
+  }
+  function handleCompletedTask(event: FormEvent) {
+    let completedTask = 0;
+    event.target.checked
+      ? (completedTask = completedTask + 1)
+      : (completedTask = completedTask - 1);
+
+    onCompletedTasks(completedTask);
+  }
   return (
-    <div className={style.Task}>
-      <div className={style.checkBox}>
-        <input type="checkBox" />
-        <span className={style.check}></span>
+    <main className={style.Task}>
+      <div className={style.Box}>
+        <label>
+          <input
+            type="checkBox"
+            id="checkBox"
+            className={style.checkBox}
+            onClick={handleCompletedTask}
+          />
+          <span className={style.check}></span>
+        </label>
       </div>
       <div className={style.textTask}>
         <p>{content}</p>
       </div>
-      <Trash className={style.trash} size={24} />
-    </div>
+      <button
+        className={style.trash}
+        onClick={handleDeleteTask}
+        title="Deletar Tarefa"
+      >
+        <Trash size={24} />
+      </button>
+    </main>
   );
 }

@@ -1,18 +1,51 @@
 .Task {
   width: 46rem;
   height: 4.5rem;
-  display: flex;
-  justify-content: space-between;
-  background: var(--Gray-500);
   margin-bottom: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 8px;
+  background: var(--Gray-500);
 }
-.checkBox,
+.Box,
 .textTask,
 .trash {
   margin: 1rem 0.75rem 2rem 1rem;
 }
+.checkBox {
+  -webkit-appearance: none;
+  appearance: none;
 
+  width: 22px;
+  height: 22px;
+  border-radius: 12px;
+  border: 2px solid var(--Blue);
+  background: var(--Gray-500);
+}
+.checkBox:checked {
+  border: none;
+  outline: none;
+  background: var(--Purple);
+}
 .textTask {
-  color: var(--Gray-100);
   font-size: 14px;
+  line-height: 1.4;
+  color: var(--Gray-100);
+  word-wrap: break-word;
+}
+.trash {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  color: var(--Gray-300);
+  background: transparent;
+
+  transition: color 0.3s;
+}
+.trash:hover {
+  color: var(--Danger);
 }
